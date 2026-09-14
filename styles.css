@@ -317,33 +317,34 @@ a { color: inherit; text-decoration: none; }
    HOW WE PROMOTE (red section)
    ============================================================ */
 .promote {
-  background: var(--red);
-  color: var(--black);
+  background:
+    radial-gradient(circle at 12% 15%, rgba(255,43,43,0.16), transparent 45%),
+    var(--black);
   padding: 110px 0;
 }
 .promote-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: var(--line-on-red);
-  border: 1px solid var(--line-on-red);
+  background: var(--line-on-dark);
+  border: 1px solid var(--line-on-dark);
   margin-top: 20px;
 }
 .promote-card {
-  background: var(--red);
+  background: var(--near-black);
   padding: 40px 32px;
 }
-.promote-icon { display: block; color: var(--black); width: 44px; height: 44px; margin-bottom: 22px; }
+.promote-icon { display: block; color: var(--red); width: 44px; height: 44px; margin-bottom: 22px; }
 .promote-icon svg { display: block; width: 100%; height: 100%; }
 .promote-name {
   font-family: var(--font-display);
   text-transform: uppercase;
   font-size: 1.4rem;
-  color: var(--black);
+  color: var(--white);
   margin-bottom: 12px;
   letter-spacing: 0.01em;
 }
-.promote-desc { color: rgba(10,10,10,0.72); font-size: 0.98rem; }
+.promote-desc { color: var(--gray-on-dark); font-size: 0.98rem; }
 
 /* ============================================================
    CASE STUDIES
@@ -507,12 +508,28 @@ a { color: inherit; text-decoration: none; }
    ============================================================ */
 @media (max-width: 900px) {
   .promote-grid { grid-template-columns: repeat(2, 1fr); }
-  .reel-grid { grid-template-columns: repeat(2, 1fr); }
   .work-timeline { grid-template-columns: repeat(2, 1fr); }
   .case-framework { grid-template-columns: repeat(2, 1fr); }
   .case-feature-grid { grid-template-columns: 1fr; }
   .case-more { grid-template-columns: 1fr; }
   .case-feature { padding: 36px 26px; }
+
+  .reel-grid {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 16px;
+    margin: 0 -32px;
+    padding: 4px 32px 12px;
+  }
+  .reel-grid::-webkit-scrollbar { display: none; }
+  .reel-card {
+    flex: 0 0 72%;
+    scroll-snap-align: center;
+  }
 }
 
 @media (max-width: 720px) {
@@ -538,7 +555,8 @@ a { color: inherit; text-decoration: none; }
   .nav-toggle { display: flex; }
 
   .promote-grid { grid-template-columns: 1fr; }
-  .reel-grid { grid-template-columns: 1fr; }
   .work-timeline { grid-template-columns: 1fr; }
   .case-framework { grid-template-columns: 1fr; gap: 16px; }
+
+  .reel-card { flex: 0 0 82%; }
 }
