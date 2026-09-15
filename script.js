@@ -63,6 +63,44 @@ if ('IntersectionObserver' in window && revealEls.length) {
 }
 
 // ============================================================
+// CONTACT FORM (Web3Forms)
+// ============================================================
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm && formStatus) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    formStatus.textContent = 'Sending...';
+    formStatus.className = 'form-status';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(contactForm),
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        formStatus.textContent = "Thanks — we'll be in touch soon.";
+        formStatus.className = 'form-status success';
+        contactForm.reset();
+      } else {
+        throw new Error(result.message || 'Something went wrong');
+      }
+    } catch (err) {
+      formStatus.textContent = "Couldn't send — please email us directly instead.";
+      formStatus.className = 'form-status error';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}
+
+// ============================================================
 // FOOTER YEAR
 // ============================================================
 const yearEl = document.getElementById('year');

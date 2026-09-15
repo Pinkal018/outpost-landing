@@ -19,7 +19,7 @@
      ============================================================ -->
 <header class="site-header" id="site-header">
   <div class="container header-inner">
-    <a href="#hero" class="logo"><img src="Logo.png" alt="RedHop Media" class="logo-img"></a>
+    <a href="#hero" class="logo"><span class="logo-red">RED</span>HOP<span class="logo-dot">.</span></a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
@@ -81,10 +81,10 @@
             <span class="reel-tag">Sport Edits</span>
           </div>
         </div>
-        <div class="reel-card reel-card-fitness reveal">
+        <div class="reel-card reel-card-lifestyle reveal">
           <div class="reel-frame">
-            <video class="reel-video" src="fitness.mp4" autoplay muted loop playsinline></video>
-            <span class="reel-tag">Transition Reels</span>
+            <video class="reel-video" src="lifestyle.mp4" autoplay muted loop playsinline></video>
+            <span class="reel-tag">Lifestyle Content</span>
           </div>
         </div>
         <div class="reel-card reel-card-dance reveal">
@@ -93,10 +93,10 @@
             <span class="reel-tag">Choreography</span>
           </div>
         </div>
-        <div class="reel-card reel-card-lifestyle reveal">
+        <div class="reel-card reel-card-fitness reveal">
           <div class="reel-frame">
-            <video class="reel-video" src="lifestyle.mp4" autoplay muted loop playsinline></video>
-            <span class="reel-tag">Lifestyle Content</span>
+            <video class="reel-video" src="fitness.mp4" autoplay muted loop playsinline></video>
+            <span class="reel-tag">Transition Reels</span>
           </div>
         </div>
       </div>
@@ -263,10 +263,28 @@
       <h2 class="section-heading section-heading-onred">Ready to Make<br>Your Song Move<span class="dot">?</span></h2>
       <p class="contact-copy">Tell us about your next release and let&rsquo;s build the campaign around it.</p>
 
-      <a href="mailto:pratikmakwana009@gmail.com?subject=Start%20My%20Campaign%20%E2%80%94%20RedHop%20Media" class="btn btn-dark btn-large">Start Your Campaign</a>
+      <a href="mailto:info@redhopmedia.com?subject=Start%20My%20Campaign%20%E2%80%94%20RedHop%20Media" class="btn btn-dark btn-large">Start Your Campaign</a>
 
       <div class="contact-links">
-        <a href="mailto:pratikmakwana009@gmail.com">pratikmakwana009@gmail.com</a>
+        <a href="mailto:info@redhopmedia.com">info@redhopmedia.com</a>
+      </div>
+
+      <div class="contact-form-wrap">
+        <p class="contact-form-divider">Or send the details directly</p>
+        <!-- Replace the access_key value below with your own free key from web3forms.com so submissions reach your inbox -->
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New enquiry from the RedHop Media website">
+          <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <textarea name="message" placeholder="Tell us about your release..." rows="4" required></textarea>
+          <button type="submit" class="btn btn-dark btn-large">Send Message</button>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -279,8 +297,9 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <span class="logo footer-logo"><img src="Logo.png" alt="RedHop Media" class="logo-img footer-logo-img"><span class="footer-media">Media</span></span>
+      <span class="logo footer-logo"><span class="logo-red">RED</span>HOP<span class="logo-dot">.</span> <span class="footer-media">Media</span></span>
       <p class="footer-tagline">Global Music &times; Culture.</p>
+      <a href="mailto:info@redhopmedia.com" class="footer-email">info@redhopmedia.com</a>
     </div>
     <nav class="footer-nav">
       <a href="#creative">Creative</a>
