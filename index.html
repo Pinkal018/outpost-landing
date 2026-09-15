@@ -271,10 +271,8 @@
 
       <div class="contact-form-wrap">
         <p class="contact-form-divider">Or send the details directly</p>
-        <!-- Replace the access_key value below with your own free key from web3forms.com so submissions reach your inbox -->
-        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-          <input type="hidden" name="subject" value="New enquiry from the RedHop Media website">
+        <!-- Handled by contact.php, which emails submissions to pinkalmakwana018@gmail.com. Requires PHP hosting (works on Hostinger; will not work previewed on GitHub Pages). -->
+        <form class="contact-form" id="contact-form" action="contact.php" method="POST">
           <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off">
 
           <div class="form-row">

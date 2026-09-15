@@ -63,7 +63,7 @@ if ('IntersectionObserver' in window && revealEls.length) {
 }
 
 // ============================================================
-// CONTACT FORM (Web3Forms)
+// CONTACT FORM (posts to contact.php, which emails the submission)
 // ============================================================
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
