@@ -63,7 +63,8 @@ if ('IntersectionObserver' in window && revealEls.length) {
 }
 
 // ============================================================
-// CONTACT FORM (posts to contact.php, which emails the submission)
+// CONTACT FORM (posts to a Google Apps Script Web App, which logs
+// the submission to a Google Sheet and emails it)
 // ============================================================
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');

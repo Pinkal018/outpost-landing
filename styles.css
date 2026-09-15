@@ -150,7 +150,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
-.logo-dot { color: var(--red); }
+.logo-dot { color: var(--red); margin-left: -0.14em; }
 
 .site-nav { display: flex; align-items: center; gap: 30px; }
 .nav-link {
