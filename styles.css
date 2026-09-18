@@ -204,10 +204,11 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-display);
   text-transform: uppercase;
   font-size: clamp(4.6rem, 16vw, 9.8rem);
-  line-height: 0.94;
+  line-height: 1.04;
   margin: 24px 0 28px;
 }
 .hero-headline .line { display: block; }
+.hero-headline .dot { margin-left: 0.05em; }
 .line-white { color: var(--white); }
 .line-red { color: var(--red); }
 
@@ -410,6 +411,9 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.25;
   color: var(--red);
 }
+
+.case-more-toggle-wrap { text-align: center; margin-bottom: 32px; }
+.case-more-toggle { min-width: 240px; }
 
 /* ============================================================
    HOW WE WORK

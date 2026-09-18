@@ -63,6 +63,29 @@ if ('IntersectionObserver' in window && revealEls.length) {
 }
 
 // ============================================================
+// CASE STUDIES — SEE MORE TOGGLE
+// ============================================================
+const caseMoreToggle = document.getElementById('case-more-toggle');
+const caseMoreStudies = document.getElementById('case-more-studies');
+
+if (caseMoreToggle && caseMoreStudies) {
+  caseMoreToggle.addEventListener('click', () => {
+    const isHidden = caseMoreStudies.hasAttribute('hidden');
+
+    if (isHidden) {
+      caseMoreStudies.removeAttribute('hidden');
+      caseMoreStudies.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-visible'));
+      caseMoreToggle.textContent = 'Show Fewer Case Studies';
+      caseMoreToggle.setAttribute('aria-expanded', 'true');
+    } else {
+      caseMoreStudies.setAttribute('hidden', '');
+      caseMoreToggle.textContent = 'See More Case Studies';
+      caseMoreToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// ============================================================
 // CONTACT FORM (posts to a Google Apps Script Web App, which logs
 // the submission to a Google Sheet and emails it)
 // ============================================================
